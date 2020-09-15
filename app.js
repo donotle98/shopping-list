@@ -5,7 +5,7 @@ function main(){
     event.preventDefault();
     const listItem = $('#shopping-list-entry').val();
     // eslint-disable-next-line no-console
-    console.log(listItem);
+    //console.log(listItem);
     $('#shopping-list-entry').val('');
     if(listItem === ''){
       $('.shopping-list').append(
@@ -34,14 +34,14 @@ function main(){
                     </div>
                   </li>`);
     }
-    
   });
-  $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
+
+  $('.shopping-list').on('click', '.shopping-item-delete', function() {
     $(this).closest('li').remove();
   });
     
-  $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
+  $('.shopping-list').on('click', '.shopping-item-toggle', function() {
     $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
   });
 }
-$(main());
+$(main);
